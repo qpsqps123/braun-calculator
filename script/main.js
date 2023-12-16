@@ -10,6 +10,7 @@ import {
   calculate,
 } from "./operators/index.js";
 import { clearEntry, clear } from "./reset/index.js";
+import { toggleDescDialog } from "./desc-dialog/desc-dialog-visibility.js";
 
 /* --------------------------------- 이벤트 타겟을 변수에 할당--------------------------------- */
 const targetNumber = document.querySelectorAll(".number");
@@ -66,7 +67,7 @@ for (let i = 0; i < targetOperator.length; i++) {
 }
 
 document.addEventListener("keydown", handleKeyDown);
-document.addEventListener("keyUp", handleKeyUp);
+// document.addEventListener("keyUp", handleKeyUp);
 
 function handleKeyDown(e) {
   switch (e.key) {
@@ -160,7 +161,7 @@ function handleKeyDown(e) {
   }
 }
 
-function handleKeyUp() {}
+// function handleKeyUp() {}
 
 // function formatValue(value, decimalPlaces) {
 
@@ -182,3 +183,5 @@ function handleKeyUp() {}
 //     return value;
 //   }
 // }
+
+document.addEventListener("click", toggleDescDialog);
