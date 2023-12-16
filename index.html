@@ -8,8 +8,44 @@
     <title>Braun Calculator</title>
   </head>
   <body>
-    <h1 class="a11yHidden">Braun Calculator</h1>
-    <section class="calculator">
+    <header>
+      <h1 class="a11yHidden">Braun Calculator</h1>
+      <dialog id="descDialog" class="descDialog">
+        <section>
+          <h2>Usage</h2>
+          <button
+            type="button"
+            id="closeDescDialogButton"
+            class="closeDescDialogButton"
+            aria-label="close usage dialog"
+          >
+            X
+          </button>
+          <h3>Shortcut</h3>
+          <ul>
+            <li>0 ~ 9 : numbers</li>
+            <li>+ : plus</li>
+            <li>- : substract</li>
+            <li>* : multiply</li>
+            <li>/ : divide</li>
+            <li>% : percentage</li>
+            <li>@ : square root</li>
+            <li>F9 : plus/minus sign</li>
+            <li>Enter : calculate</li>
+            <li>Esc : clear</li>
+          </ul>
+        </section>
+      </dialog>
+      <button
+        type="button"
+        id="descDialogButton"
+        class="descDialogButton"
+        aria-label="Show usage dialog"
+      >
+        ?
+      </button>
+    </header>
+    <main class="calculator">
       <h2 class="brandName" aria-label="brand name">br<span>a</span>un</h2>
       <div class="display" aria-label="display">
         <div class="displayValue" aria-label="displayValue">0</div>
@@ -36,7 +72,7 @@
         <button type="button" class="operator result">=</button>
         <button type="button" class="operator addition">+</button>
       </div>
-    </section>
+    </main>
     <footer class="footer">
       <p>
         This 'Braun Calculator' project by
