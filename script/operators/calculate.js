@@ -28,7 +28,12 @@ export function calculate() {
       +gd.resultValue[gd.i].toFixed(8)
     );
 
-    targetDisplayValue.textContent == 0 ? (gd.resultValue[gd.i] = 0) : ""; // 부동소수점 계산 오차의 한계 때문에 계산 값이 정확히 0이 안나와서 루트 계산 시 0인데도 불구하고 값이 나온다. 그래서 추가해준 식.
+    // 자바스크립트의 부동소수점 계산 오차 한계 때문에 (자바스크립트는 배정밀도 64비트 부동소수점 형식으로 표현한다.)
+    // 계산 값이 정확히 0 혹은 1이 안나와서 루트 계산 시 표시 텍스트가 0 혹은 1인데도 실제 값은 아주 작은 소수점 값이
+    // 붙어서 나온다.
+    // 이 에러 핸들링을 위해 추가해준 식.
+    targetDisplayValue.textContent == 0 ? (gd.resultValue[gd.i] = 0) : "";
+    targetDisplayValue.textContent == 1 ? (gd.resultValue[gd.i] = 1) : "";
 
     gd.operandA[gd.i + 1] = +gd.resultValue[gd.i];
 
