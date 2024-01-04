@@ -67,7 +67,6 @@ for (let i = 0; i < targetOperator.length; i++) {
 }
 
 document.addEventListener("keydown", handleKeyDown);
-// document.addEventListener("keyUp", handleKeyUp);
 
 function handleKeyDown(e) {
   switch (e.key) {
@@ -160,28 +159,5 @@ function handleKeyDown(e) {
       break;
   }
 }
-
-// function handleKeyUp() {}
-
-// function formatValue(value, decimalPlaces) {
-
-//   const parsedValue = parseFloat(value);
-//   const exponentialForm = value.toExponential();
-//   const [coefficient, exponent] = exponentialForm.split("e");
-//   const roundedCoefficient = parseFloat(coefficient).toFixed(decimalPlaces);
-//   // console.log(typeof exponentialForm);
-//   // console.log(exponentialForm.includes("e"));
-//   if (value.toString().length > 9 && gd.flag.exponentialForm === false) {
-//     gd.flag.exponentialForm = true;
-//     return roundedCoefficient + "e" + exponent;
-//   } else if (gd.flag.exponentialForm) {
-//     gd.flag.exponentialForm = false;
-//     return parsedValue;
-//   } /* else if (gd.flag.exponentialForm) {
-//     gd.flag.exponentialForm = false;
-//   }  */ else {
-//     return value;
-//   }
-// }
 
 document.addEventListener("click", toggleDescDialog);
