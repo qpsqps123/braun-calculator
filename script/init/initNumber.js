@@ -49,7 +49,6 @@ export function initNumber(e) {
     gd.flag.operandA = true;
     gd.operandA[gd.i] = currentDisplayValue;
   } else {
-    // gd.flag.operandA = false;
     gd.flag.operandB = true;
     gd.operandB[gd.i] = currentDisplayValue;
   }
