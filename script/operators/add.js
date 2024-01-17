@@ -1,20 +1,28 @@
-import { gd } from "../data/globalData.js";
+import {
+  operandA,
+  operandB,
+  resultValue,
+  operator,
+  n,
+  flag,
+} from "../data/globalData.js";
+import { calculate } from "./calculate.js";
 
 export function add() {
-  gd.flag.addition = true;
-  // 현재 순번 i에서 opearndA와 operandB가 모두 할당 되어있을 때,
+  flag.addition = true;
+  // 현재 순번 n에서 opearndA와 operandB가 모두 할당 되어있을 때,
   // operator 핸들러 함수가 호출 되면,
   // calculate 함수가 실행된다.
-  if (gd.operandA[gd.i] && gd.operandB[gd.i]) {
+  if (operandA[n] && operandB[n]) {
     calculate();
     const addition = () => {
-      gd.resultValue[gd.i] = gd.operandA[gd.i] + gd.operandB[gd.i];
+      resultValue[n] = operandA[n] + operandB[n];
     };
-    gd.operator[gd.i] = addition;
+    operator[n] = addition;
   } else {
     const addition = () => {
-      gd.resultValue[gd.i] = gd.operandA[gd.i] + gd.operandB[gd.i];
+      resultValue[n] = operandA[n] + operandB[n];
     };
-    gd.operator[gd.i] = addition;
+    operator[n] = addition;
   }
 }

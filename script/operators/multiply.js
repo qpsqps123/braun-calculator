@@ -1,17 +1,25 @@
-import { gd } from "../data/globalData.js";
+import {
+  operandA,
+  operandB,
+  resultValue,
+  operator,
+  n,
+  flag,
+} from "../data/globalData.js";
+import { calculate } from "./calculate.js";
 
 export function multiply() {
-  gd.flag.multiplication = true;
-  if (gd.operandA[gd.i] && gd.operandB[gd.i]) {
+  flag.multiplication = true;
+  if (operandA[n] && operandB[n]) {
     calculate();
     const multiplication = () => {
-      gd.resultValue[gd.i] = gd.operandA[gd.i] * gd.operandB[gd.i];
+      resultValue[n] = operandA[n] * operandB[n];
     };
-    gd.operator[gd.i] = multiplication;
+    operator[n] = multiplication;
   } else {
     const multiplication = () => {
-      gd.resultValue[gd.i] = gd.operandA[gd.i] * gd.operandB[gd.i];
+      resultValue[n] = operandA[n] * operandB[n];
     };
-    gd.operator[gd.i] = multiplication;
+    operator[n] = multiplication;
   }
 }

@@ -1,20 +1,18 @@
 import { targetDisplayValue } from "../main.js";
-import { gd } from "../data/globalData.js";
+import { operandA, operandB, operator, n, flag } from "../data/globalData.js";
 
 export function initNumber(e) {
   // operandA부터 입력하는 상황이든(계산을 처음 시작하는)
   // operandB부터 입력하는 상황이든(연속 사칙연산 자동 연산하는)
   // calculate 함수를 연속으로 입력하는 상황 외에
   // calculate 함수가 호출되기 이전에는 반드시 initNumber 함수가 호출되어야 하기 때문에
-  // gd.flag.calculated = false를 이곳에 넣어준다.
+  // flag.calculated = false를 이곳에 넣어준다.
   targetDisplayValue.style.fontSize = "30px";
   targetDisplayValue.style.lineHeight = "1.1";
-  gd.flag.calculated = false;
+  flag.calculated = false;
 
   if (e.target.textContent === ".") {
-    gd.operator[gd.i] && !gd.operandB[gd.i]
-      ? (targetDisplayValue.textContent = "0.")
-      : "";
+    operator[n] && !operandB[n] ? (targetDisplayValue.textContent = "0.") : "";
 
     targetDisplayValue.textContent.includes(".")
       ? ""
@@ -29,11 +27,11 @@ export function initNumber(e) {
     targetDisplayValue.textContent === "Invalid Input"
   ) {
     targetDisplayValue.textContent = e.target.textContent;
-  } else if (!gd.operator[gd.i] && !gd.flag.operandA) {
+  } else if (!operator[n] && !flag.operandA) {
     // operator ==== false 조건을 걸지 않으면, 연속 사칙연산 자동 연산 시 operandB 입력할 때
-    // gd.flag.operandA = false가 되어 있기 때문에 여기서 계속 걸린다.
+    // flag.operandA = false가 되어 있기 때문에 여기서 계속 걸린다.
     targetDisplayValue.textContent = e.target.textContent;
-  } else if (gd.operator[gd.i] && !gd.flag.operandB) {
+  } else if (operator[n] && !flag.operandB) {
     targetDisplayValue.textContent = e.target.textContent;
   } else {
     targetDisplayValue.textContent.length > 9
@@ -43,13 +41,13 @@ export function initNumber(e) {
 
   const currentDisplayValue = +targetDisplayValue.textContent;
 
-  if (!gd.operator[gd.i]) {
-    // gd.flag.operandA 값이 true가 되기 전 처음 한 번은 false다.
+  if (!operator[n]) {
+    // flag.operandA 값이 true가 되기 전 처음 한 번은 false다.
     // 그러므로 위의 else if 조건에 최초 한 번이 걸린다.
-    gd.flag.operandA = true;
-    gd.operandA[gd.i] = currentDisplayValue;
+    flag.operandA = true;
+    operandA[n] = currentDisplayValue;
   } else {
-    gd.flag.operandB = true;
-    gd.operandB[gd.i] = currentDisplayValue;
+    flag.operandB = true;
+    operandB[n] = currentDisplayValue;
   }
 }

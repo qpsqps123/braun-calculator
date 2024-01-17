@@ -1,17 +1,25 @@
-import { gd } from "../data/globalData.js";
+import {
+  operandA,
+  operandB,
+  resultValue,
+  operator,
+  n,
+  flag,
+} from "../data/globalData.js";
+import { calculate } from "./calculate.js";
 
 export function subtract() {
-  gd.flag.subtraction = true;
-  if (gd.operandA[gd.i] && gd.operandB[gd.i]) {
+  flag.subtraction = true;
+  if (operandA[n] && operandB[n]) {
     calculate();
     const subtraction = () => {
-      gd.resultValue[gd.i] = gd.operandA[gd.i] - gd.operandB[gd.i];
+      resultValue[n] = operandA[n] - operandB[n];
     };
-    gd.operator[gd.i] = subtraction;
+    operator[n] = subtraction;
   } else {
     const subtraction = () => {
-      gd.resultValue[gd.i] = gd.operandA[gd.i] - gd.operandB[gd.i];
+      resultValue[n] = operandA[n] - operandB[n];
     };
-    gd.operator[gd.i] = subtraction;
+    operator[n] = subtraction;
   }
 }

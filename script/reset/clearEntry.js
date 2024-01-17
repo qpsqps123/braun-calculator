@@ -1,8 +1,8 @@
 import { targetDisplayValue } from "../main.js";
-import { gd } from "../data/globalData.js";
+import { operandA, operandB, operator, n, flag } from "../data/globalData.js";
 
 export function clearEntry() {
-  if (gd.operator[gd.i] && !gd.operandB[gd.i]) {
+  if (operator[n] && !operandB[n]) {
     // 연산자를 누르면 할당한 숫자가 지워지지 않게 한다.
     return;
   } else if (
@@ -21,11 +21,11 @@ export function clearEntry() {
 
   const currentDisplayValue = +targetDisplayValue.textContent;
 
-  if (!gd.operator[gd.i]) {
-    gd.flag.operandA = true;
-    gd.operandA[gd.i] = currentDisplayValue;
+  if (!operator[n]) {
+    flag.operandA = true;
+    operandA[n] = currentDisplayValue;
   } else {
-    gd.flag.operandB = true;
-    gd.operandB[gd.i] = currentDisplayValue;
+    flag.operandB = true;
+    operandB[n] = currentDisplayValue;
   }
 }

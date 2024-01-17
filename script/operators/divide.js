@@ -1,25 +1,33 @@
-import { gd } from "../data/globalData.js";
+import {
+  operandA,
+  operandB,
+  resultValue,
+  operator,
+  n,
+  flag,
+} from "../data/globalData.js";
+import { calculate } from "./calculate.js";
 
 export function divide() {
-  gd.flag.division = true;
-  if (gd.operandA[gd.i] && gd.operandB[gd.i]) {
+  flag.division = true;
+  if (operandA[n] && operandB[n]) {
     calculate();
     const division = () => {
-      if (gd.operandB[gd.i] === 0) {
-        gd.flag.denominatorError = true;
+      if (operandB[n] === 0) {
+        flag.denominatorError = true;
       } else {
-        gd.resultValue[gd.i] = gd.operandA[gd.i] / gd.operandB[gd.i];
+        resultValue[n] = operandA[n] / operandB[n];
       }
     };
-    gd.operator[gd.i] = division;
+    operator[n] = division;
   } else {
     const division = () => {
-      if (gd.operandB[gd.i] === 0) {
-        gd.flag.denominatorError = true;
+      if (operandB[n] === 0) {
+        flag.denominatorError = true;
       } else {
-        gd.resultValue[gd.i] = gd.operandA[gd.i] / gd.operandB[gd.i];
+        resultValue[n] = operandA[n] / operandB[n];
       }
     };
-    gd.operator[gd.i] = division;
+    operator[n] = division;
   }
 }

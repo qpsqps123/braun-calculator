@@ -1,25 +1,32 @@
-import { gd } from "../data/globalData.js";
+import {
+  operandA,
+  resultValue,
+  operator,
+  n,
+  flag,
+} from "../data/globalData.js";
+import { calculate } from "./calculate.js";
 
 export function radical() {
-  if (gd.flag.calculated) {
+  if (flag.calculated) {
     const squareRoot = () => {
-      if (gd.operandA[gd.i] < 0) {
-        gd.flag.invalidInputError = true;
+      if (operandA[n] < 0) {
+        flag.invalidInputError = true;
       } else {
-        gd.resultValue[gd.i] = Math.sqrt(gd.operandA[gd.i]);
+        resultValue[n] = Math.sqrt(operandA[n]);
       }
     };
-    gd.operator[gd.i - 1] = squareRoot;
+    operator[n - 1] = squareRoot;
     calculate();
   } else {
     const squareRoot = () => {
-      if (gd.operandA[gd.i] < 0) {
-        gd.flag.invalidInputError = true;
+      if (operandA[n] < 0) {
+        flag.invalidInputError = true;
       } else {
-        gd.resultValue[gd.i] = Math.sqrt(gd.operandA[gd.i]);
+        resultValue[n] = Math.sqrt(operandA[n]);
       }
     };
-    gd.operator[gd.i] = squareRoot;
+    operator[n] = squareRoot;
     calculate();
   }
 }
