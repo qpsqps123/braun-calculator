@@ -1,2 +1,2 @@
-export * from "./clearEntry.js";
+export * from "./removeLastDigit.js";
 export * from "./clear.js";

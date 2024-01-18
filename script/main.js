@@ -9,7 +9,7 @@ import {
   toggleSign,
   calculate,
 } from "./operators/index.js";
-import { clearEntry, clear } from "./reset/index.js";
+import { removeLastDigit, clear } from "./reset/index.js";
 import { toggleDescDialog } from "./desc-dialog/desc-dialog-visibility.js";
 
 /* --------------------------------- 이벤트 타겟을 변수에 할당--------------------------------- */
@@ -152,7 +152,7 @@ function handleKeyDown(e) {
       break;
 
     case "Backspace":
-      clearEntry();
+      removeLastDigit();
       break;
 
     default:
