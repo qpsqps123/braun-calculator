@@ -34,7 +34,11 @@ export function initNumber(e) {
   } else if (operator[n] && !flag.operandB) {
     targetDisplayValue.textContent = e.target.textContent;
   } else {
-    targetDisplayValue.textContent.length > 9
+    targetDisplayValue.textContent.includes(".")
+      ? targetDisplayValue.textContent.length > 10
+        ? ""
+        : (targetDisplayValue.textContent += e.target.textContent)
+      : targetDisplayValue.textContent.length > 9
       ? ""
       : (targetDisplayValue.textContent += e.target.textContent);
   }
