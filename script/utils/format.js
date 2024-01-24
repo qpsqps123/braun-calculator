@@ -34,9 +34,13 @@ export function setDisplayFormat(value) {
     : String(value).length > 10;
 
   if (displayOverflow) {
-    const exponentialForm = parseFloat(value).toExponential(4);
+    const exponentialForm = value.toExponential(4);
     return exponentialForm;
   } else {
-    return value;
+    if (String(value).includes("e")) {
+      return value.toExponential(4);
+    } else {
+      return value;
+    }
   }
 }
