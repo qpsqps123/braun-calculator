@@ -24,8 +24,11 @@ export function calculate() {
     operator[n]();
   }
 
-  // 에러 처리
-  if (flag.denominatorError) {
+  // 오류 처리
+  if (isNaN(resultValue[n])) {
+    clear();
+    return;
+  } else if (flag.denominatorError) {
     targetDisplayValue.textContent = "Denominator can't be 0";
     targetDisplayValue.style.fontSize = "16px";
     targetDisplayValue.style.lineHeight = "2";
@@ -33,8 +36,6 @@ export function calculate() {
   } else if (flag.invalidInputError) {
     targetDisplayValue.textContent = "Invalid Input";
     flag.invalidInputError = false;
-  } else if (isNaN(resultValue[n])) {
-    clear();
   } else if (validateResultValueRange(resultValue[n]) === "Out of range") {
     resultValue[n] = validateResultValueRange(resultValue[n]);
     targetDisplayValue.textContent = setDisplayFormat(resultValue[n]);
