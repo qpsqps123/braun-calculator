@@ -13,7 +13,7 @@ import {
 import { clear } from "../reset/clear.js";
 
 export function calculate() {
-  if (!operator[n] && !flag.calculated) return; // 첫 번째 연산이면서 연산자도 없을 때, 연산 버튼 클릭 시 생기는 에러 처리.
+  if (!operator[n] && !flag.calculated) return;
 
   // 연산 처리
   if (flag.calculated) {
