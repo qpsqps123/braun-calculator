@@ -2,8 +2,11 @@ import { targetDisplayValue } from "../main.js";
 import { operandA, operandB, operator, n, flag } from "../data/globalData.js";
 
 export function removeLastDigit() {
-  if (operator[n] && !operandB[n]) {
-    // 연산자를 누르면 할당한 숫자가 지워지지 않게 한다.
+  if (
+    operator[n] &&
+    !operandB[n] &&
+    !targetDisplayValue.textContent.includes(".")
+  ) {
     return;
   } else if (
     targetDisplayValue.textContent === "Denominator can't be 0" ||
