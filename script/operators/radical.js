@@ -12,6 +12,7 @@ export function radical() {
     const squareRoot = () => {
       if (operandA[n] < 0) {
         flag.invalidInputError = true;
+        operandA[n] = undefined;
       } else {
         resultValue[n] = Math.sqrt(operandA[n]);
       }
@@ -22,6 +23,7 @@ export function radical() {
     const squareRoot = () => {
       if (operandA[n] < 0) {
         flag.invalidInputError = true;
+        operandA[n] = undefined;
       } else {
         resultValue[n] = Math.sqrt(operandA[n]);
       }

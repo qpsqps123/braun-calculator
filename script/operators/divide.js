@@ -15,6 +15,7 @@ export function divide() {
     const division = () => {
       if (operandB[n] === 0) {
         flag.denominatorError = true;
+        operandB[n] = undefined;
       } else {
         resultValue[n] = operandA[n] / operandB[n];
       }
@@ -24,6 +25,7 @@ export function divide() {
     const division = () => {
       if (operandB[n] === 0) {
         flag.denominatorError = true;
+        operandB[n] = undefined;
       } else {
         resultValue[n] = operandA[n] / operandB[n];
       }

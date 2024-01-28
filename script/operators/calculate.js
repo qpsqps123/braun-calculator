@@ -25,7 +25,11 @@ export function calculate() {
   }
 
   // 오류 처리
-  if (isNaN(resultValue[n])) {
+  if (
+    isNaN(resultValue[n]) &&
+    flag.denominatorError === false &&
+    flag.invalidInputError === false
+  ) {
     clear();
     return;
   } else if (flag.denominatorError) {
@@ -34,7 +38,7 @@ export function calculate() {
     targetDisplayValue.style.lineHeight = "2";
     flag.denominatorError = false;
   } else if (flag.invalidInputError) {
-    targetDisplayValue.textContent = "Invalid Input";
+    targetDisplayValue.textContent = "Invalid input";
     flag.invalidInputError = false;
   } else if (validateResultValueRange(resultValue[n]) === "Out of range") {
     resultValue[n] = validateResultValueRange(resultValue[n]);
