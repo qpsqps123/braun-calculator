@@ -2,7 +2,7 @@
 
 Braun Calculator 프로젝트는 제가 좋아하는 브라운 사의 계산기를 웹으로 옮겨본 프로젝트입니다.
 
-본 문서에서는 이 계산기의 <a href="https://github.com/qpsqps123/braun-calculator?tab=readme-ov-file#%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95">사용 방법</a>, <a href="https://github.com/qpsqps123/braun-calculator?tab=readme-ov-file#%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5">주요 기능</a>, <a href="https://github.com/qpsqps123/braun-calculator?tab=readme-ov-file#%EC%98%88%EC%99%B8-%EC%B2%98%EB%A6%AC">예외 처리</a>, <a href="https://github.com/qpsqps123/braun-calculator?tab=readme-ov-file#%EB%B2%94%EC%9C%84-&-%ED%98%95%EC%8B%9D">범위 & 형식</a>을 소개합니다.
+본 문서에서는 이 계산기의 <a href="https://github.com/qpsqps123/braun-calculator?tab=readme-ov-file#%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95">사용 방법</a>, <a href="https://github.com/qpsqps123/braun-calculator?tab=readme-ov-file#%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5">주요 기능</a>, <a href="https://github.com/qpsqps123/braun-calculator?tab=readme-ov-file#%EC%98%88%EC%99%B8-%EC%B2%98%EB%A6%AC">예외 처리</a>, <a href="https://github.com/qpsqps123/braun-calculator?tab=readme-ov-file#%EB%B2%94%EC%9C%84--%ED%98%95%EC%8B%9D">범위 & 형식</a>을 소개합니다.
 
 배포 주소는 https://qpsqps123.github.io/braun-calculator/ 입니다.
 
