@@ -39,6 +39,7 @@ export function calculate() {
     flag.denominatorError = false;
   } else if (flag.invalidInputError) {
     targetDisplayValue.textContent = "Invalid input";
+    targetDisplayValue.style.fontSize = "22px";
     flag.invalidInputError = false;
   } else if (validateResultValueRange(resultValue[n]) === "Out of range") {
     resultValue[n] = validateResultValueRange(resultValue[n]);
