@@ -21,11 +21,19 @@ Braun Calculator 프로젝트는 제가 좋아하는 브라운 사의 계산기�
 
 ### 사칙연산
 
+#### 덧셈
+
 ![Description of the addition operation](./images/readme/braun-calculator-readme-add.gif)
+
+#### 뺄셈
 
 ![Description of the subtraction operation](./images/readme/braun-calculator-readme-subtract.gif)
 
+#### 곱셈
+
 ![Description of the multiplication operation](./images/readme/braun-calculator-readme-multiply.gif)
+
+#### 나눗셈
 
 ![Description of the division operation](./images/readme/braun-calculator-readme-divide.gif)
 
@@ -39,11 +47,19 @@ Braun Calculator 프로젝트는 제가 좋아하는 브라운 사의 계산기�
 
 ### 퍼센트 연산
 
+#### 덧셈 퍼센트
+
 ![Description of the add percentage operation](./images/readme/braun-calculator-readme-percentage-add.gif)
+
+#### 뺄셈 퍼센트
 
 ![Description of the subtract percentage operation](./images/readme/braun-calculator-readme-percentage-subtract.gif)
 
+#### 곱셈 퍼센트
+
 ![Description of the multiply percentage operation](./images/readme/braun-calculator-readme-percentage-multiply.gif)
+
+#### 나눗셈 퍼센트
 
 ![Description of the divide percentage operation](./images/readme/braun-calculator-readme-percentage-divide.gif)
 
